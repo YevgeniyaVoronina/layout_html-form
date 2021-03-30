@@ -9,149 +9,185 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>HTML Form</h1>
-    <script type="text/javascript" src="./main.js"></script>
-    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application"
-          method="POST"
-          autocomplete="off">
-      <fieldset class="block_1">
-        <legend> Personal information </legend>
-        <label for="surname" class="block_1_item">
-
+    <form
+      action="https://mate-academy-form
+      -lesson.herokuapp.com/create-application"
+      method="POST"
+      autocomplete="off"
+      >
+      <fieldset class="fieldset">
+        <legend>Personal information</legend>
+        <label class="block__item" for="surname">
           Surname:
           <input
-        type="text"
-        name="surname"
-        id="surname">
+            type="text"
+            name="surname"
+            id="surname"
+            required
+          >
         </label>
-        <label for="name" class="block_1_item">
-          Name
+
+        <label class="block__item" for="name">
+          Name:
           <input
-        type="name"
-        name="name"
-        id="name">
+            type="text"
+            name="name"
+            id="name"
+            required
+          >
         </label>
-        <label for="age" class="block_1_item">
-      How old are you
-          <input type="number"
-        name="age"
-        id="age"
-        value="1"
-        min="1"
-        max="100">
-        </label>
-        <label for="birth" class="block_1_item">
-        Full date of birth
+
+        <label class="block__item" for="age">
+          How old are You?
           <input
-        type ="date"
-        name="birth"
-        id="birth">
+            type="number"
+            min="10"
+            max="100"
+            name="age"
+            id="age"
+            value="12"
+          >
         </label>
-        <label for="agreement" class="block_1_item">
-        I accept the term of the agreement
+
+        <label class="block__item" for="birth">
+          Full date of birth:
           <input
-        type="checkbox"
-        name="agreement"
-        id="agreement"
+            type="date"
+            name="birth"
+            id="birth"
+          >
+        </label>
+
+        <label class="block__item" for="agreement"
         required>
+          I accept the term of the agreement
+          <input
+            type="checkbox"
+            name="agreement"
+            id="agreement"
+          >
         </label>
       </fieldset>
-      <fieldset class="block_2">
-        <legend> Registration </legend>
-        <label for="registration" class="block_2_item">
-        Email
+
+      <fieldset class="fieldset">
+        <legend>Registration</legend>
+        <label class="block__item" for="email">
+          E-mail:
           <input
-        type="email"
-        name="registration"
-        id="registration"
-        placeholder="email@example.com"
-        autocomplete="off">
+            type="email"
+            name="email"
+            placeholder="email@example.com"
+            id="email"
+            required
+          >
         </label>
-        <label for="password" class="block_2_item">
-        Password
+
+        <label class="block__item"
+               for="password"
+               minlength="8"
+               maxlength="20"
+        >
+        Password:
           <input
-        type="password"
-        name="password"
-        id="password"
-        autocomplete="off"
-        min="8"
-        max="20">
+            type="password"
+            name="password"
+            id="password"
+            minlength="7"
+            maxlength="40"
+            required
+          >
         </label>
       </fieldset>
-      <fieldset class="block_3">
+
+      <fieldset class="fieldset">
         <legend>An interesting fact about you!</legend>
-        <div class="block_3">
-        Do you love Cats?
+        <div class="block__item" for="cats">
+        Do you love cats?
           <label for="cats_yes">
             <input
-        type="radio"
-        id="cats_yes"
-        name="cats"
-        value="yes"
->
-        Yes
+              type="radio"
+              name="cats_yes"
+              value="Yes"
+              id="cats_yes"
+            >
+              Yes
           </label>
-          <label for ="cats_no">
+          <label for="cats_no">
             <input
-        type="radio"
-        id="cats_no"
-        name="cats"
-        value="no"
->
-        No
+              type="radio"
+              name="cats_no"
+              value="No"
+              id="cats_no"
+            >
+              No
           </label>
         </div>
-        <label for="color" class="block_3_item">
+
+        <label class="block__item" for="color">
         What is your favorite color?
           <input
-        type="color"
-        id="color"
-        name="color">
+            type="color"
+            name="color"
+            id="color"
+          >
         </label>
-        <label for="time" class="block_3_item">
+
+        <label class="block__item" for="time">
         What time do you go to bed?
           <input
-        type="time"
-        id="time"
-        name="time">
+            type="time"
+            step="2"
+            name="time"
+            id="time"
+          >
         </label>
-        <label for="cars" class="block_3_item">
+
+        <label class="block__item" for="car">
         What are your favorite brand of cars?
-          <select
-        name="cars"
-        id="cars"
-        multiple
->
-            <option value="bmw">BMW</option>
-            <option value="audi">Audi</option>
-            <option value="lada">Lada</option>
+          <select name="car" id="car"
+        multiple>
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="Lada">Lada</option>
           </select>
         </label>
-        <label for="work" class="block_3_item">
+        <label class="block__item" for="range">
         How do you rate our work?
           <input
-        type="range"
-        id="work"
-        name="work"
-        value="1">
+            type="range"
+            name="range"
+            value="0"
+            id="range"
+            min="0"
+            max="100"
+          >
         </label>
       </fieldset>
-      <fieldset class="block_4">
-        <legend>Additional info</legend>
-        <label for="comments" class="block_4_items">
+
+      <fieldset class="fieldset">
+        <legend>Additional info:</legend>
+        <label class="block__item" for="comments">
         Comments:
-          <textarea id="comments" name="comments"></textarea>
+          <textarea
+          name="comments"
+          id="comments"
+          cols="18"
+          rows="2"
+        >
+          </textarea>
         </label>
-        <label for="recommend" class="block_4_item">
+
+        <label class="block__item" for="recommend">
         Would you recommend us?
-          <select id="recommend" name="recommend">
-            <option value="yes">yes</option>
+          <select name="recommend" id="recommend">
+            <option value="yes" selected>yes</option>
             <option value="no">no</option>
           </select>
         </label>
       </fieldset>
-      <button type="submit">Submit</button>
+      <button type="submit" onsubmit="onSubmit()">
+      Submit
+      </button>
     </form>
-    <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
